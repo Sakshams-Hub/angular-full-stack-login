@@ -1,0 +1,86 @@
+<div>
+  <div class="form-container sign-in-container">
+    <form (ngSubmit)="onSubmit()">
+      <h1>Create Account</h1>
+      <div class="social-container">
+        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+      </div>
+      <span>or use your email for registration</span>
+      <input
+        type="text"
+        placeholder="Username"
+        id="username"
+        [(ngModel)]="registrationData.username"
+        required
+        [ngModelOptions]="{ standalone: true }"
+      />
+
+      <input
+        type="email"
+        placeholder="Email"
+        id="email"
+        [(ngModel)]="registrationData.email_id"
+        required
+        [ngModelOptions]="{ standalone: true }"
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        id="password"
+        [(ngModel)]="registrationData.password"
+        required
+        [ngModelOptions]="{ standalone: true }"
+      />
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-right">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button class="ghost" id="signIn" type="button" (click)="gotologin()">
+          Sign In
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<div> 
+  <form (ngSubmit)="onSubmit()">
+    <label for="username">Username:</label><br />
+    <input
+      type="text"
+      id="username"
+      name="username"
+      [(ngModel)]="registrationData.username"
+      required
+    />
+    <br />
+    <label for="email">Email:</label><br />
+    <input
+      type="email"
+      id="email"
+      name="email"
+      [(ngModel)]="registrationData.email_id"
+      required
+    />
+    <br />
+    <label for="password">Password:</label><br />
+    <input
+      type="password"
+      id="password"
+      name="password"
+      [(ngModel)]="registrationData.password"
+      required
+    /><br />
+    <br />
+    <button type="submit">Register</button>
+  </form>
+  <br />
+  <button type="button" (click)="gotologin()">Login</button>
+</div> 
+</div> -->
